@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<section>
+    <form>
+        <h3>Order an album</h3>
+        <fieldset>
+            <p>
+                <label for="firstname">Firstname:</label>
+                <label for="firstname" class="required">
+                    <strong class="required" title="Mandatory field">*</strong>
+                </label>
+                <input type="text" name="firstname" id="firstname"
+                       required placeholder="Name Firstname" />
+            </p>
+            <p>
+                <label for="lastname">Lastname:</label>
+                <label for="lastname" class="required">
+                    <strong class="required" title="Mandatory field">*</strong>
+                </label>
+                <input type="text" name="lastname" id="lastname"
+                       required placeholder="Name Lastname" />
+            </p>
+            <p>
+                <label for="address">Address:</label>
+                <label for="address" class="required">
+                    <strong class="required" title="Mandatory field">*</strong>
+                </label>
+                <input type="text" name="address" id="address"
+                       required placeholder="Name Address" />
+            </p>
+            <p>
+                <label for="post">Postal code:</label>
+                <label for="post" class="required">
+                    <strong class="required" title="Mandatory field">*</strong>
+                </label>
+                <input type="text" name="post" id="post"
+                       required placeholder="Name Postal code" />
+            </p>
+            <p>
+                <label for="city">City:</label>
+                <label for="city" class="required">
+                    <strong class="required" title="Mandatory field">*</strong>
+                </label>
+                <input type="text" name="city" id="city"
+                       required placeholder="Name City" />
+            </p>
+            <p>
+                <label for="mail">E-mail:</label>
+                <label for="mail" class="required">
+                    <strong class="required" title="Mandatory field">*</strong>
+                </label>
+                <input type="email" name="mail" id="mail"
+                       required placeholder="foo@bar.com" />
+            </p>
+        <p>
+            <label> Select album:</label>
+            <strong class="required" title="Mandatory field">*</strong>
+            <select>
+                <option value="">The gallery</option>
+                <option value="">We are the void</option>
+                <option value="">Under the Sign of the Black Mark</option>
+                <option value="">Hammerheart</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+        </p>
+        <p class="inputs">
+            <input class="inputs" value="order" type="submit">
+        </p>
+        </fieldset>
+    </form>
+    </section>
+</body>
+</html>
