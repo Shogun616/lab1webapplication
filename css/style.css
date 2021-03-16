@@ -1,6 +1,6 @@
 /* General */
 body{
-    background: url('img/Teutoburg.jpg') no-repeat fixed;
+    background: url('../img/battle-of-the-teutoberg-forest-56a61c273df78cf7728b63b6.webp') no-repeat fixed;
     background-size: cover;
     color: white;
     margin: 20px;
@@ -19,8 +19,7 @@ p{
     font-size: 16px;
     line-height:130%;
     padding: 0;
-    margin: 0;
-    margin-bottom: 7px;
+    margin: 0 0 7px;
 }
 
 section{
@@ -37,7 +36,7 @@ section{
 
 header{
     grid-area: header;
-    padding: 10px;
+    padding: 50px;
 }
 
 nav{
@@ -105,9 +104,13 @@ ul.social_list li{
     padding: 8px;
 }
 
+/* Phone */
+@media screen and (min-width: 375px) and (max-width: 812px){
+
+}
+
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    /* Ändrar storlek på fonter */
     h1{
         font-size: 30px;
     }
@@ -120,7 +123,6 @@ ul.social_list li{
         font-size:  15px;
     }
 
-    /* Centrerar grid-container och bestämmer 1000px bredd */
     section.grid-container{
         width: 1000px;
         margin: 20px auto;
@@ -130,21 +132,17 @@ ul.social_list li{
         text-align: center;
     }
 
-    /* Ändrar grid columns till 1fr 1fr (2 enheter bredvid varandra) */
     main{
         grid-template-columns: 1fr 1fr;
     }
 
-
-
-    ul.social_list{ /* Döljer menyn med länkar till sociala medier */
+    ul.social_list{
         display: none;
     }
 }
 
 /* Desktop */
 @media screen and (min-width: 1025px) {
-    /* Ändrar storlek på fonter */
     h1{
         font-size: 30px;
     }
@@ -157,7 +155,6 @@ ul.social_list li{
         font-size: 15px;
     }
 
-    /* Centrerar grid-container och bestämmer 1000px bredd */
     section.grid-container{
         width: 1000px;
         margin: 20px auto;
@@ -167,7 +164,6 @@ ul.social_list li{
         text-align: center;
     }
 
-    /* Ändrar grid columns till 1fr 1fr (2 enheter bredvid varandra) */
     main{
         grid-template-columns: 1fr 1fr;
     }
@@ -176,7 +172,7 @@ ul.social_list li{
         flex-direction: row;
     }
 
-    ul.social_list{ /* Döljer menyn med länkar till sociala medier */
+    ul.social_list{
         display: none;
     }
 }
