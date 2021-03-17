@@ -7,49 +7,37 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="Bathory.html">Bathory</a>
+    <a href="Chthonic.html">Chthonic</a>
+    <a href="Dark%20Tranquillity.html">Dark Tranquillity</a>
+    <a href="Rammstein.html">Rammstein</a>
+    <a href="Discography.html">Discography</a>
+    <a href="About.html">About Us</a>
+    <a href="Contact.html">Contact</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 <section>
     <form id="order_form">
         <h3>Order an album</h3>
         <fieldset>
             <p>
-                <label for="firstname">Firstname:</label>
-                <label for="firstname" class="required">
+                <label for="Name">Name:</label>
+                <label for="Name" class="required">
                     <strong class="required" title="Mandatory field">*</strong>
                 </label>
-                <input type="text" name="firstname" id="firstname"
-                       required placeholder="Name Firstname" />
+                <input type="text" name="Name" id="Name"
+                       required placeholder="Name" />
             </p>
             <p>
-                <label for="lastname">Lastname:</label>
-                <label for="lastname" class="required">
+                <label for="Username">Username:</label>
+                <label for="Username" class="required">
                     <strong class="required" title="Mandatory field">*</strong>
                 </label>
-                <input type="text" name="lastname" id="lastname"
-                       required placeholder="Name Lastname" />
-            </p>
-            <p>
-                <label for="address">Address:</label>
-                <label for="address" class="required">
-                    <strong class="required" title="Mandatory field">*</strong>
-                </label>
-                <input type="text" name="address" id="address"
-                       required placeholder="Name Address" />
-            </p>
-            <p>
-                <label for="post">Postal code:</label>
-                <label for="post" class="required">
-                    <strong class="required" title="Mandatory field">*</strong>
-                </label>
-                <input type="text" name="post" id="post"
-                       required placeholder="Name Postal code" />
-            </p>
-            <p>
-                <label for="city">City:</label>
-                <label for="city" class="required">
-                    <strong class="required" title="Mandatory field">*</strong>
-                </label>
-                <input type="text" name="city" id="city"
-                       required placeholder="Name City" />
+                <input type="text" name="Username" id="Username"
+                       required placeholder="Username" />
             </p>
             <p>
                 <label for="mail">E-mail:</label>
@@ -59,8 +47,32 @@
                 <input type="email" name="mail" id="mail"
                        required placeholder="foo@bar.com" />
             </p>
+            <p>
+                <label for="address">Address:</label>
+                <label for="address" class="required">
+                    <strong class="required" title="Mandatory field">*</strong>
+                </label>
+                <input type="text" name="address" id="address"
+                       required placeholder="Address" />
+            </p>
+            <p>
+                <label for="post">Postal code:</label>
+                <label for="post" class="required">
+                    <strong class="required" title="Mandatory field">*</strong>
+                </label>
+                <input type="text" name="post" id="post"
+                       required placeholder="Postal code" />
+            </p>
+            <p>
+                <label for="city">City:</label>
+                <label for="city" class="required">
+                    <strong class="required" title="Mandatory field">*</strong>
+                </label>
+                <input type="text" name="city" id="city"
+                       required placeholder="City" />
+            </p>
         <p>
-            <label> Select album</label>
+            <label>Select album</label>
             <strong class="required" title="Mandatory field">*</strong>
             <select id="selAlbum">
                 <option value="Gallery">The Gallery 79kr</option>
@@ -83,5 +95,6 @@
     <p id="output"></p>
     </section>
 <script src="js/order.js"></script>
+<script src="js/navbar.js"></script>
 </body>
 </html>

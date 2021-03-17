@@ -8,11 +8,23 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="Bathory.html">Bathory</a>
+    <a href="Chthonic.html">Chthonic</a>
+    <a href="Dark%20Tranquillity.html">Dark Tranquillity</a>
+    <a href="Rammstein.html">Rammstein</a>
+    <a href="Discography.html">Discography</a>
+    <a href="About.html">About Us</a>
+    <a href="Contact.html">Contact</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 <h1>Contact us</h1>
 <p>You can find us from 10.00 till 20.00 at:</p>
 <p>00390785375372</p>
 <h2>Fill the form</h2>
-<form action="" method="post">
+<form action="" method="post" id="contact_form">
     <fieldset>
         <legend>Who are you?</legend>
         <p>
@@ -46,23 +58,26 @@
         </p>
 
         <p>
-            <label for="mmessage">Text:</label>
-            <label for="mmessage" class="required">
+            <label for="message">Text:</label>
+            <label for="message" class="required">
                 <strong class="required" title="Mandatory field">*</strong>
             </label>
-            <textarea id="mmessage" name="mmessage" required placeholder="Write your messagge here."></textarea>
+            <textarea id="message" name="message" required placeholder="Write your message here."></textarea>
         </p>
+        <input type="checkbox" id="terms">
+        <label for="terms" class="checkbox"> Check to agree to terms &amp; conditions</label>
+        <div id="termsHint" class="warning"></div>
     </fieldset>
 
     <fieldset>
         <p>
-            <input value="send" type="submit" />
+            <input value="send" type="submit" id="feedback"/>
         </p>
         <input name="prevent_multiple_submits" value="{$random_string}" type="hidden">
     </fieldset>
-
-    <a href="index.html" >Homepage</a></h2>
     </p>
 </form>
+<script src="js/contact.js"></script>
+<script src="js/navbar.js"></script>
 </body>
 </html>

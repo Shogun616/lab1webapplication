@@ -1,6 +1,7 @@
 const elAlbum = document.querySelector('#selAlbum');
 const elAmount = document.querySelector('#amount')
 const elForm = document.querySelector('#order_form');
+const elMsg = document.querySelector('#feedback');
 
 function calculatePrice(event){
 
@@ -44,16 +45,15 @@ function calculatePrice(event){
     totalPrice = price* elAmount.value;
 
     if(totalPrice>= 500){
-        totalPrice = 'You got 10% discount ' + totalPrice*0.9 + ' kr';
+        totalPrice = 'Congratulation You got 10% discount ' + totalPrice*0.9 + ' kr';
     }
     else{
-        totalPrice = 'Total cost: ' + totalPrice + ' kr'
+        totalPrice = 'Order received. Your total cost will be: ' + totalPrice + ' kr'
     }
 
     document.querySelector('#output').textContent = totalPrice;
-    document.querySelector('#output').innerHTML = localStorage.getItem('');
     event.preventDefault();
 }
 
-elForm.addEventListener('submit', calculatePrice);
+elForm.addEventListener('submit', calculatePrice, false);
 
