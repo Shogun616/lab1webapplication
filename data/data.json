@@ -1,0 +1,29 @@
+{
+  "top5": [
+    {
+      "Album": "Mutter",
+      "Artist": "Rammstein",
+      "ReleaseDate": "2001-04-05"
+    },
+    {
+      "Album": "Bú-Tik",
+      "Artist": "Chtnonic",
+      "ReleaseDate": "2013-05-31"
+    },
+    {
+      "Album": "Untitled",
+      "Artist": "Rammstein",
+      "ReleaseDate": "2019-05-17"
+    },
+    {
+      "Album": "We Are The Void",
+      "Artist": "Dark Tranquillity",
+      "ReleaseDate": "2010-02-24"
+    },
+    {
+      "Album": "Hamerheart",
+      "Artist": "Bathory",
+      "ReleaseDate": "1990-04-16"
+    }
+  ]
+}

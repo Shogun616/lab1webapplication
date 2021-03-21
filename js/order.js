@@ -1,14 +1,29 @@
 const elAlbum = document.querySelector('#selAlbum');
 const elAmount = document.querySelector('#amount')
 const elForm = document.querySelector('#order_form');
-const elMsg = document.querySelector('#feedback');
+let elOutput = document.querySelector('#output');
 
-function calculatePrice(event){
+function albumOrder(event){
+    let inAntal = elAmount.value;
+    let getAlbumChoice = elAlbum.value;
+
+    if(inAntal.length < 1){
+        elOutput.textContent = 'You must order at least 1 album.';
+    }
+    else {
+        elOutput.textContent = albumFinishedOrder(getAlbumChoice, inAntal);
+    }
+
+    event.preventDefault();
+}
+function albumFinishedOrder(albumChoice, antal){
 
     let price;
+    let totalPrice = 0;
+    let output = '';
 
     switch (elAlbum.value){
-        case 'Void':
+        case 'We Are The Void':
             price = 99;
             break;
 
@@ -20,7 +35,7 @@ function calculatePrice(event){
             price = 99;
             break;
 
-        case 'Tasakgo':
+        case 'Tasakgo Army':
             price = 109;
             break;
 
@@ -28,7 +43,7 @@ function calculatePrice(event){
             price = 159;
             break;
 
-        case 'Mark':
+        case 'Under the Sign of the Black Mark':
             price = 69;
             break;
 
@@ -36,24 +51,22 @@ function calculatePrice(event){
             price = 159;
             break;
 
-        case 'Gallery':
+        case 'The Gallery':
             price = 79;
             break;
     }
 
-    let totalPrice;
-    totalPrice = price* elAmount.value;
+    totalPrice = antal* price;
+
+    output = 'You ordered ' + antal +'  '+ albumChoice + '. Total Price: ' + totalPrice + ' kr. ';
 
     if(totalPrice>= 500){
-        totalPrice = 'Congratulation You got 10% discount ' + totalPrice*0.9 + ' kr';
-    }
-    else{
-        totalPrice = 'Order received. Your total cost will be: ' + totalPrice + ' kr'
+        let discount = totalPrice * 0.9;
+        output = output + ' Congratulation, you get 10% discount. You will now pay: ' + discount + ' kr.';
     }
 
-    document.querySelector('#output').textContent = totalPrice;
-    event.preventDefault();
+    return output;
 }
 
-elForm.addEventListener('submit', calculatePrice, false);
+elForm.addEventListener('submit', albumOrder, false);
 
