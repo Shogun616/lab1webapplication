@@ -69,4 +69,3 @@ function albumFinishedOrder(albumChoice, antal){
 }
 
 elForm.addEventListener('submit', albumOrder, false);
-

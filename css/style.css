@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans&display=swap');
 /* General */
+/* Mobile first */
 body{
     background: url('../img/black-background-wood-❤-4k-hd-desktop-wallpaper-for-4k-ultra-hd.jpg') no-repeat fixed;
     background-size: cover;
@@ -8,10 +10,10 @@ body{
 }
 
 h1{
-    font-family: Georgia, Helvetica, Arial, san-serif;
+    font-family: 'Merriweather', serif;
     font-size: 40px;
     font-weight: bold;
-    color: white;
+    color: black;
     margin-bottom: 12px;
 }
 
@@ -22,6 +24,18 @@ p{
     margin: 0 0 7px;
 }
 
+section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 50px;
+    grid-template-areas:
+    "header"
+    "navigation"
+    "main-content"
+    "footer";
+    grid-gap: 20px;
+}
+
 header{
     grid-area: header;
     padding: 50px;
@@ -30,7 +44,7 @@ header{
 nav{
     grid-area: navigation;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Meny för mobil */
 }
 
 nav a{
@@ -74,7 +88,7 @@ main article{
 
 footer{
     grid-area: footer;
-    color: white;
+    color : white;
 }
 
 .start_img{
@@ -92,8 +106,14 @@ ul.social_list li{
     padding: 8px;
 }
 
+/*.youtube_responsive{*/
+/*    width: 100%;*/
+/*    height: 350px;*/
+/*}*/
+
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Ändrar storlek på fonter */
     h1{
         font-size: 30px;
     }
@@ -106,6 +126,7 @@ ul.social_list li{
         font-size:  15px;
     }
 
+    /* Centrerar grid-container och bestämmer 1000px bredd */
     section.grid-container{
         width: 1000px;
         margin: 20px auto;
@@ -115,17 +136,19 @@ ul.social_list li{
         text-align: center;
     }
 
+    /* Ändrar grid columns till 1fr 1fr (2 enheter bredvid varandra) */
     main{
         grid-template-columns: 1fr 1fr;
     }
 
-    ul.social_list{
+    ul.social_list{ /* Döljer menyn med länkar till sociala medier */
         display: none;
     }
 }
 
 /* Desktop */
 @media screen and (min-width: 1025px) {
+    /* Ändrar storlek på fonter */
     h1{
         font-size: 30px;
     }
@@ -138,6 +161,7 @@ ul.social_list li{
         font-size: 15px;
     }
 
+    /* Centrerar grid-container och bestämmer 1000px bredd */
     section.grid-container{
         width: 1000px;
         margin: 20px auto;
@@ -147,15 +171,16 @@ ul.social_list li{
         text-align: center;
     }
 
+    /* Ändrar grid columns till 1fr 1fr (2 enheter bredvid varandra) */
     main{
         grid-template-columns: 1fr 1fr;
     }
 
     nav{
-        flex-direction: row;
+        flex-direction: row; /* Ändrar menyn till på en rad */
     }
 
-    ul.social_list{
+    ul.social_list{ /* Döljer menyn med länkar till sociala medier */
         display: none;
     }
 }
