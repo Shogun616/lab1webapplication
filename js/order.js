@@ -19,8 +19,8 @@ function albumOrder(event){
 function albumFinishedOrder(albumChoice, antal){
 
     let price;
-    let totalPrice = 0;
-    let output = '';
+    let totalPrice;
+    let output;
 
     switch (elAlbum.value){
         case 'We Are The Void':

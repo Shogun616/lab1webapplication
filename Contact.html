@@ -24,8 +24,7 @@
 <p>You can find us from 10.00 till 20.00 at:</p>
 <p>00390785375372</p>
 <h2>Fill the form</h2>
-<section>
-<form action="" method="post" id="contact_form">
+<form action="index.html" method="post" id="contact_form">
     <fieldset>
         <legend>Who are you?</legend>
         <p>
@@ -56,7 +55,6 @@
             </label>
             <input type="text" name="subject" id="subject"
                    required placeholder="5 characters at least" /><div id="feedback"></div>
-        </p>
 
         <p>
             <label for="message">Text:</label>
@@ -73,11 +71,10 @@
     <fieldset>
         <p class="inputs">
             <input class="inputs" type="submit" value="send">
-<!--        <input name="prevent_multiple_submits" value="{$random_string}" type="hidden">-->
+        <input name="prevent_multiple_submits" value="{$random_string}" type="hidden">
     </fieldset>
 </form>
 <a id="output"></a>
-</section>
 <script src="js/contact.js"></script>
 <script src="js/navbar.js"></script>
 </body>

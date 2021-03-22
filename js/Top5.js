@@ -30,7 +30,7 @@ function append(parent, el) {
     return parent.appendChild(el);
 }
 
-const ul = document.querySelector('#top5');
+const ol = document.querySelector('#top5');
 const url = 'data/data.json';
 fetch(url)
     .then((resp) => resp.json())
@@ -39,11 +39,10 @@ fetch(url)
         console.log("Visa första i json-objektet: " + data.top5[0].Album);
         let top5 = data.top5;
 
-        // Returnerar json-bjekten genom att skapa en ny array med map()
         return top5.map(function(top5) {
             let li = createNode('li');
-            li.innerHTML = top5.Album + " " + top5.Artist + " " + top5.ReleaseDate;
-            append(ul, li);
+            li.innerHTML = top5.Album + "<br>" + top5.Artist + "<br>" + top5.ReleaseDate;
+            append(ol, li);
         })
     })
     .catch(function(error) {

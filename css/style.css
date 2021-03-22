@@ -250,7 +250,7 @@ textarea{
 
 input[type="submit"] {
     display: block;
-    margin-inside: 10px;
+    margin-inside: auto;
 }
 
 table{

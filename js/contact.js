@@ -22,9 +22,9 @@ function checkTerms(event){
 
 function messageReady(){
 
-    let output = '';
+    let output;
 
-    output = ' Message sent We will reply to you asap';
+    output = 'Message sent. We will reply to you asap';
 
     return output;
 }
@@ -37,8 +37,7 @@ function checkSubject(minlength){
     }
 }
 
-elSubject.addEventListener('blur', function (){
+elForm.addEventListener('submit', checkTerms, false);
+elSubject.addEventListener('blur', function(){
     checkSubject(5);
 }, false);
-
-elForm.addEventListener('submit', checkTerms, false);
