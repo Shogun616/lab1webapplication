@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans&display=swap');
 /* General */
 /* Mobile first */
 body{
@@ -106,11 +105,6 @@ ul.social_list li{
     padding: 8px;
 }
 
-/*.youtube_responsive{*/
-/*    width: 100%;*/
-/*    height: 350px;*/
-/*}*/
-
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     /* Ändrar storlek på fonter */
@@ -185,6 +179,7 @@ ul.social_list li{
     }
 }
 
+/* contact */
 p{
     font-size: 16px;
     line-height:130%;
@@ -260,7 +255,7 @@ table{
 body {
     font-family: "Lato", sans-serif;
 }
-
+/* menu */
 .sidenav {
     height: 100%;
     width: 0;
