@@ -36,7 +36,7 @@ fetch(url)
     .then((resp) => resp.json())
     .then(function(data) {
         console.log(data.top5);
-        console.log("Visa första i json-objektet: " + data.top5[0].Album);
+        console.log("Show the top 5 Albums: " + data.top5[0].Album);
         let top5 = data.top5;
 
         return top5.map(function(top5) {

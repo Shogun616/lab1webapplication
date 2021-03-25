@@ -11,8 +11,6 @@ let elOutput = document.querySelector('#output');
 let orderArrays = [];
 let customer = {Name: "", UserName: "", Email: "", Address: "", Post: "", City: "", Album: ""};
 
-const elMyOrders = document.querySelector('#myorders');
-
 let data = JSON.parse(localStorage.getItem("Customers"));
 
 console.log(data);

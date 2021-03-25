@@ -5,7 +5,7 @@ body{
     background-size: cover;
     color: white;
     margin: 20px;
-    font-family: Helvetica, Arial, san-serif;
+    font-family: Helvetica, Arial, san-serif, serif;
 }
 
 h1{
@@ -188,7 +188,7 @@ p{
 }
 
 h1{
-    font-family: Georgia, Helvetica, Arial, san-serif;
+    font-family: Georgia, Helvetica, Arial, san-serif, serif;
     font-size: 40px;
     font-weight: bold;
     color: white;
@@ -197,7 +197,7 @@ h1{
 
 h3{
     color: white;
-    font-family: Arial;
+    font-family: Arial, serif;
 }
 
 fieldset {
@@ -229,9 +229,9 @@ label{
     padding-right:0;
 }
 
-input[type="text"]
-input[type="email"]
-textarea{
+input[type="text"],
+input[type="email"],
+textarea {
     flex: 1 1 25ch;
     max-width: 300px;
 }

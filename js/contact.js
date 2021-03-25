@@ -3,9 +3,6 @@ const elName = document.querySelector('#Name');
 const elMail = document.querySelector('#mail');
 const elMsg = document.querySelector('#message');
 const elSubject = document.querySelector('#subject');
-const elFb = document.querySelector('#feedback');
-const elTerms = document.querySelector('#terms');
-const elTermsHint = document.querySelector('#termsHint');
 let elOutput = document.querySelector('#output');
 
 let supportArrays = [];
