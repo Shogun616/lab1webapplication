@@ -21,7 +21,7 @@ function checkContactForm(minLength){
         elOutput.innerHTML = 'E-mail field can not be empty!';
     }
     else if(elSubject.value.length !== minLength){
-        elOutput.innerHTML = 'Subject field can not be empty!';
+        elOutput.innerHTML = 'Issue field can not be empty!';
     }
     else if(elMsg.value === ""){
         elOutput.innerHTML = 'Message field can not be empty!';
@@ -30,7 +30,7 @@ function checkContactForm(minLength){
         elOutput.innerHTML = ' <br>' +
             'Name: ' + elName.value + '<br>' +
             'E-Mail: '+ elMail.value + '<br>' +
-            'Subject: ' + elSubject.value + '<br>' +
+            'Issue: ' + elSubject.value + '<br>' +
             'Message: ' + elMsg.value + '<br>' +
             'We will reply to you asap!';
         support.Name = elName.value;
